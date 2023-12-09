@@ -39,3 +39,5 @@ cursor.execute(SQL_QUERY)
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 if __name__ == "__main__":
  app.run(host='0.0.0.0', port='8080') # indent this line
+
+# Adding a comment to test change update to VM
