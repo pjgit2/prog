@@ -31,6 +31,13 @@ conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};
 conn = pyodbc.connect(conn_str)
 
 cursor = conn.cursor()
+
+#Referenced from https://elearning.dbs.ie/mod/page/view.php?id=1445637 to test SQL query execution
+
+SQL_QUERY = ("SELECT * FROM UserDetails;") 
+
+#Referenced from https://elearning.dbs.ie/mod/page/view.php?id=1445637 ends
+       
 cursor.execute(SQL_QUERY)
 
 #Reference ends for setting pyodbc connection and running SQL.
