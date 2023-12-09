@@ -6,6 +6,15 @@ app = Flask(__name__)
 
 #Reference ends to import flask:
 
+#Referenced from the following link to test Hello World on web app
+#https://elearning.dbs.ie/mod/page/view.php?id=1445635
+
+@app.route("/")#URL leading to method
+def hello(): # Name of the method
+ return("Hello World!") #indent this line
+
+#Reference ends for Hello World testing
+
 #Reference starts for setting pyodbc connection and running SQL:
 # https://learn.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver16
 
