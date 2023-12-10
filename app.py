@@ -30,8 +30,8 @@ def report(): # Name of the method
  results = cursor.fetchall()
  return render_template('report.html',render_results=results)
 
-@app.route("/")#URL leading to method
-def index(): # Name of the method
+@app.route("/")
+def index(): 
  return render_template('index.html')
 
 #Idea taken from https://www.educative.io/answers/how-to-add-data-to-databases-in-flask
@@ -42,6 +42,14 @@ def create():
         name = request.form['name']
         number = request.form['number']
         cursor.execute("insert into UserDetails values (?,?)", (name, number))
+        conn.commit()
+    return render_template('create.html')
+
+@app.route("/delete",methods=['GET','POST'])
+def delete():
+    if request.method == 'POST':
+        id = request.form['identity']
+        cursor.execute("delete from UserDetails where id = ?", (id))
         conn.commit()
     return render_template('create.html')
 
