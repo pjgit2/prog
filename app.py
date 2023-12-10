@@ -41,7 +41,7 @@ def create():
         name = request.form['name']
         number = request.form['number']
         #SQL_QUERY = ("insert into UserDetails values (%s,%s)" %(name, number))
-        cursor.execute("insert into UserDetails values (%s,%s)" %(name, number))
+        cursor.execute("insert into UserDetails values (%s,%s)", (name, number))
         conn.commit()
     return render_template('create.html')
 
