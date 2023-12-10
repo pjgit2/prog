@@ -23,8 +23,8 @@ cursor = conn.cursor()
 #Idea from https://elearning.dbs.ie/mod/page/view.php?id=1445635
 #And https://elearning.dbs.ie/mod/page/view.php?id=1445637 
 #And https://medium.com/techcrush/how-to-render-html-file-in-flask-3fbfb16b47f6
-@app.route("/")#URL leading to method
-def index(): # Name of the method
+@app.route("/report")#URL leading to method
+def report(): # Name of the method
  SQL_QUERY = ("SELECT * FROM UserDetails;")     
  cursor.execute(SQL_QUERY)
  results = cursor.fetchall()
