@@ -2,14 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Report</title>
 </head>
 <body>
     <!--Idea taken from https://flask.palletsprojects.com/en/2.3.x/quickstart/-->
     <!--And https://ttl255.com/jinja2-tutorial-part-2-loops-and-conditional-->
     {% if render_results %}
     {% for render_row in render_results %}
-    <p> {{ render_results }}!</p>
+    <p> {{ render_row }}!</p>
     {% endfor %}
     {% else %}
     <h1>No data to display</h1>
