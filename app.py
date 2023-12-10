@@ -2,7 +2,7 @@
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 #https://flask.palletsprojects.com/en/2.3.x/quickstart
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 #Reference ends to import flask:
