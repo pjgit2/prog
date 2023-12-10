@@ -56,6 +56,7 @@ def delete():
 def update():
     if request.method == 'POST':
         id = request.form['identity']
+        number = request.form['number']
         cursor.execute("update UserDetails set PhoneNumber = ? where id = ?", (number,id))
         conn.commit()
     return render_template('update.html')
