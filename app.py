@@ -27,7 +27,7 @@ def index(): # Name of the method
  SQL_QUERY = ("SELECT * FROM UserDetails;")     
  cursor.execute(SQL_QUERY)
  results = cursor.fetchone()
- return render_template('index.html')
+ return render_template('index.html',render_results=results)
 
 #Referenced from the following link to run the app
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635

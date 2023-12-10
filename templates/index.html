@@ -1,1 +1,15 @@
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <!--Idea from https://flask.palletsprojects.com/en/2.3.x/quickstart/-->
+    {% if name %}
+    <h1> {{ render_results }}!</h1>
+    {% else %}
+    <h1>Hello, World!</h1>
+{% endif %}
+</body>
+</html>
