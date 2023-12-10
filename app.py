@@ -30,6 +30,10 @@ def report(): # Name of the method
  results = cursor.fetchall()
  return render_template('report.html',render_results=results)
 
+@app.route("/")#URL leading to method
+def index(): # Name of the method
+ return render_template('index.html')
+
 #Referenced from the following link to run the app
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 if __name__ == "__main__":
