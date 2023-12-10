@@ -34,6 +34,13 @@ def report(): # Name of the method
 def index(): # Name of the method
  return render_template('index.html')
 
+@app.route("/create")#URL leading to method
+def create(): # Name of the method
+ SQL_QUERY = ("insert into UserDetails values (%s,%s)" %(name, number))     
+ cursor.execute(SQL_QUERY)
+ conn.commit()
+ return render_template('create.html')
+
 #Referenced from the following link to run the app
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 if __name__ == "__main__":
