@@ -5,11 +5,14 @@
     <title>Index</title>
 </head>
 <body>
-    <!--Idea from https://flask.palletsprojects.com/en/2.3.x/quickstart/-->
+    <!--Idea taken from https://flask.palletsprojects.com/en/2.3.x/quickstart/-->
+    <!--And https://ttl255.com/jinja2-tutorial-part-2-loops-and-conditional-->
     {% if render_results %}
-    <h1> {{ render_results }}!</h1>
+    {% for render_row in render_results %}
+    <p> {{ render_results }}!</p>
+    {% endfor %}
     {% else %}
-    <h1>Hello, World!</h1>
+    <h1>No data to display</h1>
 {% endif %}
 </body>
 </html>
