@@ -23,7 +23,7 @@ import pyodbc
 server = 'pgmdbsrv.database.windows.net'
 database = 'pgmdb'
 username = 'addmin'
-password = 'Login123'
+password = 'xxxxx'
 driver = '{ODBC Driver 18 for SQL Server}'
 
 conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
