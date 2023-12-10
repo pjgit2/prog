@@ -26,6 +26,7 @@ cursor = conn.cursor()
 def index(): # Name of the method
  SQL_QUERY = ("SELECT * FROM UserDetails;")     
  cursor.execute(SQL_QUERY)
+ results = cursor.fetchone()
  return render_template('index.html')
 
 #Referenced from the following link to run the app
