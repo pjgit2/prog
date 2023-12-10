@@ -35,13 +35,13 @@ def index(): # Name of the method
  return render_template('index.html')
 
 #Idea taken from https://www.educative.io/answers/how-to-add-data-to-databases-in-flask
+#And https://stackoverflow.com/questions/43491381/pyodbc-the-sql-contains-0-parameter-markers-but-1-parameters-were-supplied-hy0
 @app.route("/create",methods=['GET','POST'])
 def create():
     if request.method == 'POST':
         name = request.form['name']
         number = request.form['number']
-        #SQL_QUERY = ("insert into UserDetails values (%s,%s)" %(name, number))
-        cursor.execute("insert into UserDetails values (%s,%s)", (name, number))
+        cursor.execute("insert into UserDetails values (?,?)", (name, number))
         conn.commit()
     return render_template('create.html')
 
