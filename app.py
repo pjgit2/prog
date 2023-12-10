@@ -1,7 +1,7 @@
 #Referenced from the following link to import flask:
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 #Reference ends to import flask:
