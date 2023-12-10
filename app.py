@@ -36,7 +36,7 @@ def index(): # Name of the method
 
 @app.route("/create")#URL leading to method
 def create():
-     if request.method == 'POST':
+    if request.method == 'POST':
         name = request.form['name']
         number = request.form['number']
         SQL_QUERY = ("insert into UserDetails values (%s,%s)" %(name, number))
