@@ -34,7 +34,7 @@ def report(): # Name of the method
 def index(): # Name of the method
  return render_template('index.html')
 
-@app.route("/create",methods=['POST'])
+@app.route("/create",methods=['GET','POST'])
 def create():
     if request.method == 'POST':
         name = request.form['name']
