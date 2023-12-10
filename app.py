@@ -51,7 +51,7 @@ def delete():
         id = request.form['identity']
         cursor.execute("delete from UserDetails where id = ?", (id))
         conn.commit()
-    return render_template('create.html')
+    return render_template('delete.html')
 
 #Referenced from the following link to run the app
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
