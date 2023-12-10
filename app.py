@@ -52,6 +52,14 @@ def delete():
         conn.commit()
     return render_template('delete.html')
 
+@app.route("/update",methods=['GET','POST'])
+def update():
+    if request.method == 'POST':
+        id = request.form['identity']
+        cursor.execute("update UserDetails set PhoneNumber = ? where id = ?", (number,id))
+        conn.commit()
+    return render_template('update.html')
+
 #Reference:
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 if __name__ == "__main__":
