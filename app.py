@@ -1,16 +1,11 @@
 #References:
 #https://elearning.dbs.ie/mod/page/view.php?id=1445635
 #https://flask.palletsprojects.com/en/2.3.x/quickstart
-#https://flask-login.readthedocs.io/en/latest/
 
 from flask import Flask, render_template, request, redirect
-from flask_login import LoginManager
-
 app = Flask(__name__)
 
-login_manager = LoginManager()
-login_manager.init_app(app)
-
+#Reference:
 #https://learn.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver16
 
 import pyodbc
